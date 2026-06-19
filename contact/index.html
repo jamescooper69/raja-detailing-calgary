@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Detail — Raja &amp; Co AutoDetailing Calgary</title>
+  <meta name="description" content="Book your car detailing appointment with Raja & Co AutoDetailing in Calgary. Mobile service, 7 days a week. Interior, exterior and complete packages available." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rajacoautodetailing.ca/contact/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 56px;
+      align-items: start;
+    }
+    /* ── Booking form card ─────────────────────── */
+    .booking-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .booking-card-header {
+      background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+      padding: 28px 32px;
+    }
+    .booking-card-header h2 { color: white; font-size: 1.4rem; margin-bottom: 6px; }
+    .booking-card-header p { color: rgba(255,255,255,.85); font-size: .9rem; }
+    .booking-card-body { padding: 32px; }
+    .form-section-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue-dark);
+      margin: 28px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .form-section-title:first-child { margin-top: 0; }
+    .booking-submit {
+      width: 100%;
+      padding: 16px;
+      font-size: 1rem;
+      margin-top: 8px;
+      border-radius: var(--radius-sm);
+    }
+    .form-note {
+      text-align: center;
+      font-size: .82rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    /* ── Sidebar ───────────────────────────────── */
+    .sidebar { display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card-header {
+      background: var(--surface);
+      padding: 16px 22px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-card-header h3 {
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sidebar-card-header h3 svg {
+      width: 18px; height: 18px;
+      stroke: var(--blue-dark); fill: none; stroke-width: 2;
+    }
+    .sidebar-card-body { padding: 20px 22px; }
+    .sidebar-info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--bg);
+      font-size: .88rem;
+    }
+    .sidebar-info-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .sidebar-info-row svg {
+      width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px;
+      stroke: var(--blue-dark); fill: none; stroke-width: 2;
+    }
+    .sidebar-info-row span, .sidebar-info-row a {
+      color: var(--text-body);
+      line-height: 1.5;
+    }
+    .sidebar-info-row a:hover { color: var(--blue-dark); }
+    .hours-mini { list-style: none; }
+    .hours-mini li {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0;
+      font-size: .87rem;
+      border-bottom: 1px solid var(--bg);
+    }
+    .hours-mini li:last-child { border-bottom: none; }
+    .hours-mini .day { color: var(--text-dark); font-weight: 500; }
+    .hours-mini .time { color: var(--blue-dark); font-weight: 600; font-family: 'Poppins', sans-serif; font-size: .82rem; }
+    .social-row {
+      display: flex;
+      gap: 10px;
+      padding-top: 4px;
+    }
+    .social-row .social-btn {
+      background: rgba(27,150,233,.08);
+    }
+    .service-areas-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .area-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 4px 12px;
+      font-size: .8rem;
+      color: var(--text-body);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+    }
+
+    /* ── Success message ───────────────────────── */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 48px 32px;
+    }
+    .form-success .success-icon {
+      width: 72px; height: 72px;
+      background: rgba(46,184,154,.12);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .form-success .success-icon svg {
+      width: 36px; height: 36px;
+      stroke: var(--teal-check); fill: none; stroke-width: 2.5;
+    }
+    .form-success h3 { color: var(--text-dark); margin-bottom: 10px; }
+    .form-success p { color: var(--text-body); font-size: .95rem; }
+
+    @media (max-width: 1024px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .sidebar { display: grid; grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .sidebar { grid-template-columns: 1fr; }
+      .booking-card-body { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ════════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h11l5 5v3h-3"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+        <div class="nav-logo-text"><span>Raja &amp; Co</span><span>AutoDetailing</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li>
+          <a href="#">Services <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <ul class="dropdown">
+            <li><a href="/services/interior-detailing/">Interior Detailing</a></li>
+            <li><a href="/services/exterior-detailing/">Exterior Detailing</a></li>
+            <li><a href="/services/complete-detailing/">Complete Auto Detailing</a></li>
+          </ul>
+        </li>
+        <li><a href="/location/">Location</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/contact/" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:+13653411551" class="btn btn-outline">+1 365-341-1551</a>
+        <a href="/contact/" class="btn btn-primary">Book Now</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li>
+        <a href="#" class="mobile-parent">Services <svg class="m-arrow" viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;vertical-align:middle;margin-left:4px;transition:transform .3s"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <ul class="mobile-dropdown">
+          <li><a href="/services/interior-detailing/">Interior Detailing</a></li>
+          <li><a href="/services/exterior-detailing/">Exterior Detailing</a></li>
+          <li><a href="/services/complete-detailing/">Complete Auto Detailing</a></li>
+        </ul>
+      </li>
+      <li><a href="/location/">Location</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/contact/" class="btn btn-primary">Book Now</a></li>
+    </ul>
+  </div>
+
+  <!-- ══ PAGE HEADER ════════════════════════════════════════ -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Book Your Detail</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Contact &amp; Booking</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══ BOOKING + SIDEBAR ══════════════════════════════════ -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- BOOKING FORM -->
+        <div class="booking-card">
+          <div class="booking-card-header">
+            <h2>Request Your Appointment</h2>
+            <p>Fill out the form below and we'll confirm your booking within a few hours.</p>
+          </div>
+          <div class="booking-card-body" id="formWrapper">
+
+            <div class="form-section-title">Your Information</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="john@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (403) 000-0000" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" placeholder="Calgary" required />
+              </div>
+              <div class="form-group">
+                <label for="address">Service Address *</label>
+                <input type="text" id="address" name="address" placeholder="123 Main St NW" required />
+              </div>
+            </div>
+
+            <div class="form-section-title">Vehicle Details</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vehicleMake">Vehicle Make *</label>
+                <input type="text" id="vehicleMake" name="vehicleMake" placeholder="Toyota" required />
+              </div>
+              <div class="form-group">
+                <label for="vehicleModel">Vehicle Model &amp; Year *</label>
+                <input type="text" id="vehicleModel" name="vehicleModel" placeholder="Camry 2021" required />
+              </div>
+            </div>
+
+            <div class="form-section-title">Service Selection</div>
+            <div class="form-group">
+              <label for="serviceType">Service Type *</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="" disabled selected>Select a service…</option>
+                <optgroup label="Interior Detailing">
+                  <option value="interior-basic">Basic Interior — $89</option>
+                  <option value="interior-standard">Standard Interior — $149</option>
+                  <option value="interior-premium">Premium Interior — $219</option>
+                </optgroup>
+                <optgroup label="Exterior Detailing">
+                  <option value="exterior-shine">Exterior Shine — $119</option>
+                  <option value="exterior-full">Full Paint Treatment — $199</option>
+                </optgroup>
+                <optgroup label="Complete Detailing">
+                  <option value="complete-detail">Complete Detail — $249</option>
+                  <option value="complete-premium">Premium Complete Detail — $349</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="addons">Add-On Services</label>
+              <select id="addons" name="addons" disabled>
+                <option value="">Select a service first</option>
+              </select>
+              <p style="font-size:.8rem;color:var(--text-muted);margin-top:6px;">Select your service above to see available add-ons. You can also add notes below.</p>
+            </div>
+
+            <div class="form-section-title">Appointment Details</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="preferredDate">Preferred Date *</label>
+                <input type="date" id="preferredDate" name="preferredDate" required />
+              </div>
+              <div class="form-group">
+                <label for="preferredTime">Preferred Time *</label>
+                <select id="preferredTime" name="preferredTime" required>
+                  <option value="" disabled selected>Choose a time…</option>
+                  <option value="9:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="serviceMethod">Service Method *</label>
+              <select id="serviceMethod" name="serviceMethod" required>
+                <option value="" disabled selected>How would you like to be served?</option>
+                <option value="mobile">Mobile Service — We come to your location</option>
+                <option value="self-drop">Self Drop-Off — You drop the vehicle with us</option>
+                <option value="pickup-drop">Pick-Up &amp; Drop-Off — We collect and return your vehicle</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Additional Instructions</label>
+              <textarea id="message" name="message" placeholder="Any specific instructions, areas of concern, or additional information we should know about your vehicle…"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-primary booking-submit" id="submitBtn" onclick="handleSubmit()">
+              Confirm My Booking
+            </button>
+            <p class="form-note">We'll reach out within a few hours to confirm your appointment. For urgent bookings call <a href="tel:+13653411551" style="color:var(--blue-dark);">+1 365-341-1551</a>.</p>
+
+          </div>
+          <!-- Success State -->
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Booking Request Sent!</h3>
+            <p>Thank you for choosing Raja &amp; Co AutoDetailing. We've received your request and will be in touch within a few hours to confirm your appointment.</p>
+            <p style="margin-top:12px;">Questions? Call us at <a href="tel:+13653411551" style="color:var(--blue-dark);">+1 365-341-1551</a>.</p>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <h3><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>Contact Information</h3>
+            </div>
+            <div class="sidebar-card-body">
+              <div class="sidebar-info-row">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+                <a href="tel:+13653411551">+1 365-341-1551</a>
+              </div>
+              <div class="sidebar-info-row">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:rajaautodetailing7@gmail.com">rajaautodetailing7@gmail.com</a>
+              </div>
+              <div class="sidebar-info-row">
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>1317 27 St SE, Calgary, AB T2A 4Y5</span>
+              </div>
+              <div class="sidebar-info-row" style="border:none;padding-top:12px;">
+                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <span>Follow us on social</span>
+              </div>
+              <div class="social-row">
+                <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                <a href="#" class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <h3><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Business Hours</h3>
+            </div>
+            <div class="sidebar-card-body" style="padding:16px 22px;">
+              <ul class="hours-mini">
+                <li><span class="day">Monday</span><span class="time">9 AM – 6 PM</span></li>
+                <li><span class="day">Tuesday</span><span class="time">9 AM – 6 PM</span></li>
+                <li><span class="day">Wednesday</span><span class="time">9 AM – 6 PM</span></li>
+                <li><span class="day">Thursday</span><span class="time">9 AM – 6 PM</span></li>
+                <li><span class="day">Friday</span><span class="time">9 AM – 6 PM</span></li>
+                <li><span class="day">Saturday</span><span class="time">9 AM – 6 PM</span></li>
+                <li><span class="day">Sunday</span><span class="time">9 AM – 6 PM</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <h3><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Service Areas</h3>
+            </div>
+            <div class="sidebar-card-body">
+              <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:14px;">We serve Calgary and surrounding communities:</p>
+              <div class="service-areas-mini">
+                <span class="area-tag">All Calgary</span>
+                <span class="area-tag">Airdrie</span>
+                <span class="area-tag">Chestermere</span>
+                <span class="area-tag">Cochrane</span>
+                <span class="area-tag">Okotoks</span>
+                <span class="area-tag">High River</span>
+                <span class="area-tag">Strathmore</span>
+              </div>
+              <a href="/location/" style="display:inline-block;margin-top:14px;font-size:.85rem;color:var(--blue-dark);font-weight:600;">View full service area →</a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ════════════════════════════════════════════════ -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">FAQs</span>
+        <h2>Booking Questions Answered</h2>
+        <p>Everything you need to know before making your appointment.</p>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>How quickly will you confirm my booking?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">We aim to confirm all booking requests within a few hours during business hours (9am–6pm, 7 days a week). If you submit after 6pm, we'll confirm first thing the following morning. For urgent same-day or next-day requests, call us directly at +1 365-341-1551.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What happens after I submit the booking form?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">Once you submit, our team reviews your request and reaches out by phone or email to confirm your date, time, location, and any details about your vehicle. We'll give you a final price confirmation and answer any questions before the appointment.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need to be present during the service?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">Not necessarily. Many clients leave their car with us at their home or office and go about their day. You just need to ensure we have access to the vehicle and a suitable area to work. We'll contact you when the job is complete for a final walkthrough — in person if you're available, or via photos if you're not.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I book for the same day or next day?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">Subject to availability, same-day and next-day bookings are possible. For the best chance at short-notice slots, call us directly rather than using the form — we can check the schedule in real time and get you booked right away.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if I need to cancel or reschedule?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">We ask for at least 24 hours notice for cancellations or rescheduling. Call or email us as early as possible and we'll move your appointment to a new date without issue. We're always understanding — just let us know.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>When do I pay?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">Payment is collected on completion of the service — after you've inspected the work and are completely satisfied. We accept cash, e-transfer, and all major credit and debit cards.</div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h11l5 5v3h-3"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div><div class="nav-logo-text"><span>Raja &amp; Co</span><span>AutoDetailing</span></div></a>
+          <p>Calgary's trusted mobile auto detailing service. We bring showroom results straight to your driveway — 7 days a week.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/location/">Service Area</a></li><li><a href="/contact/">Book Now</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="/services/interior-detailing/">Interior Detailing</a></li><li><a href="/services/exterior-detailing/">Exterior Detailing</a></li><li><a href="/services/complete-detailing/">Complete Detailing</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg><span><a href="tel:+13653411551" style="color:inherit;">+1 365-341-1551</a></span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span><a href="mailto:rajaautodetailing7@gmail.com" style="color:inherit;">rajaautodetailing7@gmail.com</a></span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1317 27 St SE, Calgary, AB T2A 4Y5</span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Mon–Sun: 9:00 AM – 6:00 PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Raja &amp; Co AutoDetailing. All rights reserved. | <a href="/sitemap.xml">Sitemap</a></p></div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    function handleSubmit() {
+      const required = ['firstName','lastName','email','phone','city','address','vehicleMake','vehicleModel','serviceType','preferredDate','preferredTime','serviceMethod'];
+      let valid = true;
+      required.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el || !el.value.trim()) {
+          el && (el.style.borderColor = '#e05252');
+          valid = false;
+        } else {
+          el.style.borderColor = '';
+        }
+      });
+      if (!valid) {
+        alert('Please fill in all required fields before submitting.');
+        return;
+      }
+      document.getElementById('formWrapper').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+      window.scrollTo({ top: document.querySelector('.booking-card').offsetTop - 100, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Area — Raja &amp; Co AutoDetailing Calgary</title>
+  <meta name="description" content="Raja & Co AutoDetailing serves Calgary and surrounding areas including Airdrie, Chestermere, Cochrane and more. Mobile detailing that comes to you." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rajacoautodetailing.ca/location/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .map-section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .map-text h2 { margin-bottom: 18px; }
+    .map-text p { margin-bottom: 14px; font-size: .97rem; }
+    .map-checklist { list-style: none; margin: 20px 0 28px; }
+    .map-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 0;
+      font-size: .93rem;
+      color: var(--text-body);
+      border-bottom: 1px solid var(--border);
+    }
+    .map-checklist li:last-child { border-bottom: none; }
+    .map-checklist li svg {
+      width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px;
+      stroke: var(--teal-check); fill: none; stroke-width: 2.5;
+    }
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .area-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: border-color var(--transition), transform var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .area-card:hover {
+      border-color: var(--blue-light);
+      transform: translateY(-2px);
+    }
+    .area-dot {
+      width: 10px; height: 10px; flex-shrink: 0;
+      background: var(--blue-dark);
+      border-radius: 50%;
+    }
+    .area-card span {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: .92rem;
+      color: var(--text-dark);
+    }
+    .hours-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .hours-card-header {
+      background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+      padding: 20px 24px;
+      color: white;
+    }
+    .hours-card-header h3 { color: white; font-size: 1rem; margin: 0; }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--border);
+      font-size: .9rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day { color: var(--text-dark); font-weight: 500; }
+    .hours-time { color: var(--blue-dark); font-weight: 600; font-family: 'Poppins', sans-serif; font-size: .85rem; }
+    .contact-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .contact-info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), border-color var(--transition);
+    }
+    .contact-info-card:hover { transform: translateY(-3px); border-color: var(--blue-light); }
+    .contact-info-icon {
+      width: 50px; height: 50px;
+      background: rgba(27,150,233,.1);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .contact-info-icon svg { width: 24px; height: 24px; stroke: var(--blue-dark); fill: none; stroke-width: 1.8; }
+    .contact-info-card h4 { font-size: .88rem; font-weight: 600; margin-bottom: 6px; color: var(--text-dark); }
+    .contact-info-card p, .contact-info-card a { font-size: .9rem; color: var(--text-body); }
+    .contact-info-card a:hover { color: var(--blue-dark); }
+    @media (max-width: 900px) {
+      .map-section-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ════════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h11l5 5v3h-3"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+        <div class="nav-logo-text"><span>Raja &amp; Co</span><span>AutoDetailing</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li>
+          <a href="#">Services <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <ul class="dropdown">
+            <li><a href="/services/interior-detailing/">Interior Detailing</a></li>
+            <li><a href="/services/exterior-detailing/">Exterior Detailing</a></li>
+            <li><a href="/services/complete-detailing/">Complete Auto Detailing</a></li>
+          </ul>
+        </li>
+        <li><a href="/location/" class="active">Location</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:+13653411551" class="btn btn-outline">+1 365-341-1551</a>
+        <a href="/contact/" class="btn btn-primary">Book Now</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li>
+        <a href="#" class="mobile-parent">Services <svg class="m-arrow" viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;vertical-align:middle;margin-left:4px;transition:transform .3s"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <ul class="mobile-dropdown">
+          <li><a href="/services/interior-detailing/">Interior Detailing</a></li>
+          <li><a href="/services/exterior-detailing/">Exterior Detailing</a></li>
+          <li><a href="/services/complete-detailing/">Complete Auto Detailing</a></li>
+        </ul>
+      </li>
+      <li><a href="/location/">Location</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/contact/" class="btn btn-primary">Book Now</a></li>
+    </ul>
+  </div>
+
+  <!-- ══ PAGE HEADER ════════════════════════════════════════ -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Our Location &amp; Service Area</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Location</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══ MAP + TEXT ═════════════════════════════════════════ -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="map-section-grid">
+
+        <div class="map-text">
+          <span class="section-label">Where We Are</span>
+          <h2>Car Detailing in Calgary &amp; Surrounding Areas</h2>
+          <p>Based at <strong>1317 27 St SE, Calgary, AB T2A 4Y5</strong>, Raja &amp; Co AutoDetailing is a fully mobile service — meaning we come directly to your home, workplace, or any location across Calgary and surrounding communities.</p>
+          <p>You don't need to drive anywhere or rearrange your day. Book your appointment, choose your location, and our team shows up fully equipped to deliver professional results on-site.</p>
+          <ul class="map-checklist">
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mobile service — we travel to your location</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Serving all Calgary communities — NE, NW, SE, SW</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Service available in Airdrie, Chestermere &amp; Cochrane</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>No travel fees within Calgary city limits</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Convenient scheduling 7 days a week, 9am–6pm</li>
+          </ul>
+          <a href="/contact/" class="btn btn-primary">Book at Your Location</a>
+
+          <!-- Hours -->
+          <div class="hours-card" style="margin-top: 36px;">
+            <div class="hours-card-header">
+              <h3>Business Hours</h3>
+            </div>
+            <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">9:00 AM – 6:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">9:00 AM – 6:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">9:00 AM – 6:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">9:00 AM – 6:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">9:00 AM – 6:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">9:00 AM – 6:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">9:00 AM – 6:00 PM</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.6691366905493!2d-113.99846702778626!3d51.04073133784317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53717b63174a9a65%3A0x3120833ae3a18357!2sRaja%26Co%20AutoDetailing!5e0!3m2!1sen!2s!4v1780933627183!5m2!1sen!2s"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Raja & Co AutoDetailing location on Google Maps">
+            </iframe>
+          </div>
+          <div class="contact-strip">
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg></div>
+              <h4>Phone</h4>
+              <a href="tel:+13653411551">+1 365-341-1551</a>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <h4>Email</h4>
+              <a href="mailto:rajaautodetailing7@gmail.com">rajaautodetailing7@gmail.com</a>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <h4>Address</h4>
+              <p>1317 27 St SE, Calgary, AB T2A 4Y5</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ AREAS WE SERVE ══════════════════════════════════════ -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Coverage</span>
+        <h2>Communities We Serve</h2>
+        <p>We provide mobile auto detailing across Calgary and the surrounding region. If you don't see your area listed, give us a call — we'll do our best to accommodate you.</p>
+      </div>
+
+      <h3 style="font-size:1.1rem;margin-bottom:20px;color:var(--text-dark);">Calgary Communities</h3>
+      <div class="areas-grid" style="margin-bottom:40px;">
+        <div class="area-card"><div class="area-dot"></div><span>Downtown Calgary</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Beltline</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Inglewood</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Forest Lawn</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Ramsay</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>McKenzie Towne</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Mahogany</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Auburn Bay</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Cranston</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Seton</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Midnapore</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Signal Hill</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Aspen Woods</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Tuscany</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Royal Oak</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Evanston</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Panorama Hills</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Saddle Ridge</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Martindale</span></div>
+        <div class="area-card"><div class="area-dot"></div><span>Taradale</span></div>
+      </div>
+
+      <h3 style="font-size:1.1rem;margin-bottom:20px;color:var(--text-dark);">Surrounding Towns</h3>
+      <div class="areas-grid">
+        <div class="area-card"><div class="area-dot" style="background:var(--teal-check)"></div><span>Airdrie</span></div>
+        <div class="area-card"><div class="area-dot" style="background:var(--teal-check)"></div><span>Chestermere</span></div>
+        <div class="area-card"><div class="area-dot" style="background:var(--teal-check)"></div><span>Cochrane</span></div>
+        <div class="area-card"><div class="area-dot" style="background:var(--teal-check)"></div><span>Okotoks</span></div>
+        <div class="area-card"><div class="area-dot" style="background:var(--teal-check)"></div><span>High River</span></div>
+        <div class="area-card"><div class="area-dot" style="background:var(--teal-check)"></div><span>Strathmore</span></div>
+      </div>
+      <div class="note-box" style="margin-top:28px;"><strong>Outside this list?</strong> Give us a call at <a href="tel:+13653411551" style="color:var(--blue-dark);">+1 365-341-1551</a> and we'll let you know if we can reach you. We try to accommodate requests wherever possible.</div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ════════════════════════════════════════════════ -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">FAQs</span>
+        <h2>Location &amp; Service Area Questions</h2>
+        <p>Common questions about where we operate, how mobile service works, and what to expect.</p>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>Do you come to my home or do I need to drop the car off?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">We come to you. Our service is fully mobile — we bring all the equipment, water, and products we need directly to your location. Whether it's your driveway, your workplace parking lot, or anywhere else in Calgary, just give us the address and we'll be there.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you charge a travel fee to come to my location?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">There is no travel fee for any location within Calgary city limits. For locations outside Calgary — such as Airdrie, Chestermere, Cochrane, Okotoks, or other surrounding towns — a small travel fee may apply depending on the distance. We'll always confirm this when you book so there are no surprises.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What do I need to provide at my location?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">For most services, nothing at all — we're completely self-contained. However, for services requiring a water source (such as full exterior washes), access to a standard outdoor tap can be helpful, though not always required. We'll let you know in advance if anything specific is needed for your appointment.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can you detail my car at my workplace?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">Absolutely. Many of our clients prefer to have their car detailed while they're at the office. Just make sure there's a parking spot available for us to work around the vehicle. We're discreet, professional, and fully self-contained.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you service areas outside Calgary?<span class="faq-icon">+</span></summary>
+          <div class="faq-answer">Yes — we regularly service Airdrie, Chestermere, Cochrane, Okotoks, High River, and Strathmore. For towns further out, please call us and we'll let you know if we can accommodate you. A travel fee may apply for locations outside the city.</div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA BANNER ════════════════════════════════════════ -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>We Come to You — Anywhere in Calgary</h2>
+      <p>Book your appointment and we'll bring the detail shop to your driveway. No driving, no waiting, no hassle.</p>
+      <div class="btn-group">
+        <a href="/contact/" class="btn btn-white">Book at My Location</a>
+        <a href="tel:+13653411551" class="btn btn-outline" style="border-color:rgba(255,255,255,.6);color:white;">Call +1 365-341-1551</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h11l5 5v3h-3"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div><div class="nav-logo-text"><span>Raja &amp; Co</span><span>AutoDetailing</span></div></a>
+          <p>Calgary's trusted mobile auto detailing service. We bring showroom results straight to your driveway — 7 days a week.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/location/">Service Area</a></li><li><a href="/contact/">Book Now</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="/services/interior-detailing/">Interior Detailing</a></li><li><a href="/services/exterior-detailing/">Exterior Detailing</a></li><li><a href="/services/complete-detailing/">Complete Detailing</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg><span><a href="tel:+13653411551" style="color:inherit;">+1 365-341-1551</a></span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span><a href="mailto:rajaautodetailing7@gmail.com" style="color:inherit;">rajaautodetailing7@gmail.com</a></span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1317 27 St SE, Calgary, AB T2A 4Y5</span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Mon–Sun: 9:00 AM – 6:00 PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Raja &amp; Co AutoDetailing. All rights reserved. | <a href="/sitemap.xml">Sitemap</a></p></div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior Detailing Calgary — Raja &amp; Co AutoDetailing</title>
+  <meta name="description" content="Professional interior car detailing in Calgary. Deep clean seats, carpets, dashboard and more. 3 packages to suit every budget. Mobile service available." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rajacoautodetailing.ca/services/interior-detailing/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .service-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .service-intro img { border-radius: var(--radius); box-shadow: var(--shadow-md); width: 100%; height: 400px; object-fit: cover; }
+    .service-intro-text h2 { margin-bottom: 18px; }
+    .service-intro-text p { margin-bottom: 14px; }
+    .includes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 20px; }
+    .include-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 22px; display: flex; gap: 16px; align-items: flex-start; box-shadow: var(--shadow-sm); transition: transform var(--transition); }
+    .include-card:hover { transform: translateY(-3px); }
+    .include-icon { width: 42px; height: 42px; background: rgba(27,150,233,.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .include-icon svg { width: 22px; height: 22px; stroke: var(--blue-dark); fill: none; stroke-width: 1.8; }
+    .include-card h4 { font-size: .97rem; margin-bottom: 5px; color: var(--text-dark); }
+    .include-card p { font-size: .86rem; color: var(--text-body); }
+    .pricing-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .results-gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .result-before-after { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .result-before-after img { width: 100%; height: 220px; object-fit: cover; }
+    .result-label { background: var(--surface); padding: 10px 16px; font-family: 'Poppins',sans-serif; font-size: .82rem; font-weight: 600; color: var(--blue-dark); text-transform: uppercase; letter-spacing: .06em; }
+    @media (max-width: 992px) { .pricing-grid-3 { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } .results-gallery { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) { .service-intro { grid-template-columns: 1fr; } .results-gallery { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h11l5 5v3h-3"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+        <div class="nav-logo-text"><span>Raja &amp; Co</span><span>AutoDetailing</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li>
+          <a href="#" class="active">Services <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <ul class="dropdown">
+            <li><a href="/services/interior-detailing/" class="active">Interior Detailing</a></li>
+            <li><a href="/services/exterior-detailing/">Exterior Detailing</a></li>
+            <li><a href="/services/complete-detailing/">Complete Auto Detailing</a></li>
+          </ul>
+        </li>
+        <li><a href="/location/">Location</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:+13653411551" class="btn btn-outline">+1 365-341-1551</a>
+        <a href="/contact/" class="btn btn-primary">Book Now</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="/">Home</a></li><li><a href="/about/">About</a></li>
+      <li><a href="#" class="mobile-parent">Services <svg class="m-arrow" viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;vertical-align:middle;margin-left:4px;transition:transform .3s"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <ul class="mobile-dropdown"><li><a href="/services/interior-detailing/">Interior Detailing</a></li><li><a href="/services/exterior-detailing/">Exterior Detailing</a></li><li><a href="/services/complete-detailing/">Complete Auto Detailing</a></li></ul>
+      </li>
+      <li><a href="/location/">Location</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/contact/">Contact</a></li>
+      <li><a href="/contact/" class="btn btn-primary">Book Now</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header" style="background-image: linear-gradient(135deg,rgba(15,30,43,.82) 0%,rgba(27,150,233,.5) 100%), url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1400&q=80') center/cover no-repeat;">
+    <div class="container">
+      <h1>Interior Detailing</h1>
+      <nav class="breadcrumb"><a href="/">Home</a><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2"><polyline points="9 18 15 12 9 6"/></svg><a href="#">Services</a><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2"><polyline points="9 18 15 12 9 6"/></svg><span>Interior Detailing</span></nav>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="service-intro">
+        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80" alt="Interior car detailing service Calgary" loading="lazy" />
+        <div class="service-intro-text">
+          <span class="section-label">Interior Detailing</span>
+          <h2>A Cabin That Feels Brand New</h2>
+          <p>Most people spend more time inside their car than they realize. Dirt, bacteria, odours, and stains build up gradually until your interior just doesn't feel clean anymore — even after a regular car wash.</p>
+          <p>Our interior detailing service goes far beyond a vacuum and wipe-down. We use professional-grade steam cleaners, fabric shampoos, and detail brushes to reach every corner, seam, and surface. The result is an interior that looks and smells completely refreshed.</p>
+          <p>Whether your car has pet hair everywhere, coffee stains on the seats, or just years of everyday grime — we handle it all with care and precision.</p>
+          <a href="/contact/" class="btn btn-primary" style="margin-top:10px;">Book Interior Detail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What's Included</span>
+        <h2>Everything We Do Inside Your Vehicle</h2>
+        <p>Every interior detail — regardless of package — follows our thorough multi-step process covering the entire cabin.</p>
+      </div>
+      <div class="includes-grid">
+        <div class="include-card">
+          <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+          <div><h4>Floor &amp; Carpet Vacuuming</h4><p>Deep vacuum of all carpets, floor mats, and under-seat areas using commercial-grade equipment.</p></div>
+        </div>
+        <div class="include-card">
+          <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+          <div><h4>Seat Cleaning &amp; Shampoo</h4><p>Fabric seats shampooed and extracted. Leather seats cleaned and conditioned to prevent cracking.</p></div>
+        </div>
+        <div class="include-card">
+          <div class="include-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div><h4>Dashboard &amp; Console Wipe-Down</h4><p>All hard surfaces cleaned and treated with UV protectant to prevent fading and cracking.</p></div>
+        </div>
+        <div class="include-card">
+          <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/></svg></div>
+          <div><h4>Door Panels &amp; Pockets</h4><p>Door cards, handles, and storage pockets wiped down and cleaned of embedded grime.</p></div>
+        </div>
+        <div class="include-card">
+          <div class="include-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div><h4>Interior Window Cleaning</h4><p>All glass surfaces cleaned streak-free with professional glass cleaner for maximum clarity.</p></div>
+        </div>
+        <div class="include-card">
+          <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"/></svg></div>
+          <div><h4>Air Vent Cleaning</h4><p>Dust and build-up removed from all air vents using detail brushes and compressed air.</p></div>
+        </div>
+        <div class="include-card">
+          <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <div><h4>Odour Elimination</h4><p>Deodorizing treatment applied to neutralize smoke, pet, food, and general musty odours.</p></div>
+        </div>
+        <div class="include-card">
+          <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <div><h4>Final Inspection</h4><p>We walk around with you to ensure every area meets our standard before we consider the job complete.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section section--white" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Pricing</span>
+        <h2>Interior Detailing Packages</h2>
+        <p>Three tiers to match every vehicle, every schedule, and every budget. All packages include our full interior clean process.</p>
+      </div>
+      <div class="pricing-grid-3">
+
+        <div class="pricing-card">
+          <h3>Basic Interior</h3>
+          <div class="pricing-price">$89<span> / vehicle</span></div>
+          <p class="pricing-desc">Perfect for a regular maintenance clean or lightly used vehicles.</p>
+          <ul class="pricing-features">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full vacuum (seats, floors, trunk)</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dashboard &amp; console wipe-down</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Door panels cleaned</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Interior windows cleaned</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Air freshener applied</li>
+          </ul>
+          <a href="/contact/?service=interior-basic" class="btn btn-outline">Book Basic</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <h3>Standard Interior</h3>
+          <div class="pricing-price">$149<span> / vehicle</span></div>
+          <p class="pricing-desc">Our most popular package — a thorough clean for everyday vehicles with moderate use.</p>
+          <ul class="pricing-features">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Basic</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Seat shampooing &amp; extraction</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Carpet shampoo &amp; extraction</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Air vent detail cleaning</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>UV protectant on all plastics</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Odour neutralizer treatment</li>
+          </ul>
+          <a href="/contact/?service=interior-standard" class="btn btn-primary">Book Standard</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Premium Interior</h3>
+          <div class="pricing-price">$219<span> / vehicle</span></div>
+          <p class="pricing-desc">Full deep-clean treatment for heavily used vehicles or those requiring extra care.</p>
+          <ul class="pricing-features">
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Standard</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Steam clean entire interior</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Pet hair removal</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Leather conditioning (if applicable)</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Headliner wipe &amp; spot clean</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Trunk deep clean</li>
+            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ozone odour treatment</li>
+          </ul>
+          <a href="/contact/?service=interior-premium" class="btn btn-outline">Book Premium</a>
+        </div>
+
+      </div>
+      <p style="text-align:center;margin-top:28px;font-size:.9rem;color:var(--text-muted);">Prices may vary for larger vehicles (vans, SUVs, trucks). <a href="/contact/" style="color:var(--blue-dark);">Contact us</a> for a custom quote.</p>
+    </div>
+  </section>
+
+  <!-- RESULTS GALLERY -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Real Results</span>
+        <h2>Before &amp; After — See the Difference</h2>
+        <p>These are real vehicles we've worked on. The transformation speaks for itself.</p>
+      </div>
+      <div class="results-gallery">
+        <div class="result-before-after">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80" alt="Clean interior after detailing" loading="lazy" />
+          <div class="result-label">✓ After — Standard Package</div>
+        </div>
+        <div class="result-before-after">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80" alt="Luxury interior after detailing" loading="lazy" />
+          <div class="result-label">✓ After — Premium Package</div>
+        </div>
+        <div class="result-before-after">
+          <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=600&q=80" alt="Interior seats after cleaning" loading="lazy" />
+          <div class="result-label">✓ After — Premium Package</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Client Reviews</span>
+        <h2>What Clients Say About Our Interior Service</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"My car had pet hair absolutely everywhere — two golden retrievers will do that. Raja's team removed every single strand. The seats look better than when I bought the car."</p>
+          <div class="testimonial-author"><div class="author-avatar">TN</div><div><div class="author-name">Tanya N.</div><div class="author-location">Calgary, AB</div></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Booked the premium interior package after my kids spent the summer in my car. When I got it back I couldn't believe it was the same interior. Absolutely worth it."</p>
+          <div class="testimonial-author"><div class="author-avatar">MK</div><div><div class="author-name">Marcus K.</div><div class="author-location">SE Calgary, AB</div></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The standard package was perfect for my sedan. Deep cleaned, fresh smelling, and done right at my driveway. I've already booked a second appointment for my wife's car."</p>
+          <div class="testimonial-author"><div class="author-avatar">RP</div><div><div class="author-name">Raj P.</div><div class="author-location">NW Calgary, AB</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready for a Fresh, Clean Interior?</h2>
+      <p>Book your interior detailing appointment today. We come to you — home, office, or anywhere in Calgary.</p>
+      <div class="btn-group">
+        <a href="/contact/" class="btn btn-white">Book Now</a>
+        <a href="/pricing/" class="btn btn-outline" style="border-color:rgba(255,255,255,.6);color:white;">Compare All Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h11l5 5v3h-3"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div><div class="nav-logo-text"><span>Raja &amp; Co</span><span>AutoDetailing</span></div></a>
+          <p>Calgary's trusted mobile auto detailing service. We bring showroom results straight to your driveway — 7 days a week.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/location/">Service Area</a></li><li><a href="/contact/">Book Now</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="/services/interior-detailing/">Interior Detailing</a></li><li><a href="/services/exterior-detailing/">Exterior Detailing</a></li><li><a href="/services/complete-detailing/">Complete Detailing</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg><span><a href="tel:+13653411551" style="color:inherit;">+1 365-341-1551</a></span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span><a href="mailto:rajaautodetailing7@gmail.com" style="color:inherit;">rajaautodetailing7@gmail.com</a></span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1317 27 St SE, Calgary, AB T2A 4Y5</span></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Mon–Sun: 9:00 AM – 6:00 PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Raja &amp; Co AutoDetailing. All rights reserved. | <a href="/sitemap.xml">Sitemap</a></p></div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
