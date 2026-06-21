@@ -1,60 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://rajacoautodetailing.ca/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url>
+<loc>https://rajadetailingcalgary.site/</loc>
+</url>
 
-  <url>
-    <loc>https://rajacoautodetailing.ca/about/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<url>
+<loc>https://rajadetailingcalgary.site/about/</loc>
+</url>
 
-  <url>
-    <loc>https://rajacoautodetailing.ca/services/interior-detailing/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://rajadetailingcalgary.site/contact/</loc>
+</url>
 
-  <url>
-    <loc>https://rajacoautodetailing.ca/services/exterior-detailing/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://rajadetailingcalgary.site/location/</loc>
+</url>
 
-  <url>
-    <loc>https://rajacoautodetailing.ca/services/complete-detailing/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://rajadetailingcalgary.site/pricing/</loc>
+</url>
 
-  <url>
-    <loc>https://rajacoautodetailing.ca/pricing/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
+<url>
+<loc>https://rajadetailingcalgary.site/services/complete-detailing/</loc>
+</url>
 
-  <url>
-    <loc>https://rajacoautodetailing.ca/location/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<url>
+<loc>https://rajadetailingcalgary.site/services/exterior-detailing/</loc>
+</url>
 
-  <url>
-    <loc>https://rajacoautodetailing.ca/contact/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
+<url>
+<loc>https://rajadetailingcalgary.site/services/interior-detailing/</loc>
+</url>
 
 </urlset>
